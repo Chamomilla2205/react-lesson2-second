@@ -2,16 +2,14 @@ import React, {Component} from 'react';
 import PostsComponent from "../posts/PostsComponent";
 import './AllPosts.css'
 class AllPosts extends Component {
-
     state = {posts: []}
 componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(value => value.json())
-        .then(postsFromAPI => {
-            this.setState({posts: postsFromAPI})
+        .then(posts => {
+            this.setState({posts})
         })
 }
-
 
     render() {
         let {posts} = this.state;

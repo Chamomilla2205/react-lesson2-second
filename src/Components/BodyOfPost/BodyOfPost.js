@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-
+import './BodyOfPost.css'
 class BodyOfPost extends Component {
     render() {
-        let {body,key} = this.props
+        let {body} = this.props;
         return (
             <div>
                 {body}
